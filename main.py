@@ -2,10 +2,12 @@ from gtts import gTTS
 import sys
 import os
 
+cache_root = "~/projects/text-to-deez/cache"
+
 def say(txt, language, slow: bool=False):
     textobj = gTTS(text=txt, lang=language, slow=slow)
-    textobj.save('cache/text.mp3')
-    os.system("mpg123 ./cache/text.mp3")
+    textobj.save(f'text.mp3')
+    os.system(f"mpg123 text.mp3")
 
 
 if sys.argv[1] == 'say':
