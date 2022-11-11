@@ -2,7 +2,6 @@ from gtts import gTTS
 import sys
 import os
 
-cache_root = "~/projects/text-to-deez/cache"
 
 def say(txt, language, slow: bool=False):
     textobj = gTTS(text=txt, lang=language, slow=slow)
